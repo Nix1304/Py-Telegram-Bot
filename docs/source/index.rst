@@ -1,15 +1,9 @@
 Welcome to py-telegram-api's documentation!
 ===========================================
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+.. image:: https://badge.fury.io/py/py-telegram-bot.svg
+    :target: https://badge.fury.io/py/py-telegram-bot
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. image:: https://readthedocs.org/projects/py-telegram-api/badge/?version=latest
+    :target: https://py-telegram-api.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
