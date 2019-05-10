@@ -14,14 +14,14 @@ class TelegramUploader:
         if isinstance(photo, str):
             if 'photo' not in kwargs:
                 kwargs.update({'photo': photo})
-            r = self.bot.post(self.url + '/sendPhoto', params=kwargs).json()
+            r = self.bot.session.post(self.url + '/sendPhoto', params=kwargs).json()
         elif isinstance(photo, BufferedReader):
             if 'photo' in kwargs:
                 kwargs.pop('photo')
 
-            r = self.bot.post(self.url + '/sendPhoto',
-                              files={'photo': photo},
-                              params=kwargs).json()
+            r = self.bot.session.post(self.url + '/sendPhoto',
+                                      files={'photo': photo},
+                                      params=kwargs).json()
         else:
             raise TelegramAPIException('Photo must be string or file!')
         if not r['ok']:
@@ -77,4 +77,3 @@ class TelegramUploader:
         if not r['ok']:
             raise TelegramAPIException(r['description'])
         return r['result']
-

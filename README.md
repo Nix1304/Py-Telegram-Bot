@@ -1,23 +1,23 @@
 Getting new messages and answer
 
 ```python
-from py_telegram_bot.telegram_bot import Bot
+from py_telegram_bot.bot import Bot
 
 bot = Bot('Token')
 api = bot.get_api()
 
 for update in bot.get_updates():
     # Here you can use "update['text']"
-    if update['text'] == '/start':
+    if update.text == '/start':
         # And here you can use "update['chat']['id']"
-        api.send_message(chat_id=update['chat']['id'],
+        api.send_message(chat_id=update.chat.id,
                          text='Hello!')
 ```
 
 Uploading photo, videos or docs
 
 ```python
-from py_telegram_bot.telegram_bot import Bot
+from py_telegram_bot.bot import Bot
 
 bot = Bot('Token')
 uploader = bot.get_uploader()
