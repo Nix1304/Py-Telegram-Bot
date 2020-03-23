@@ -1,10 +1,9 @@
 project = 'py-telegram-api'
-copyright = '2019, Nix13'
+copyright = '2020, Nix13'
 author = 'Nix13'
 
 extensions = [
 ]
-
 
 templates_path = ['_templates']
 
